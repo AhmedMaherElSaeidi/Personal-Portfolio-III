@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Ahmed Maher | Software Engineer &amp; Full-Stack Developer</title>
+    <meta name="title" content="Ahmed Maher | Software Engineer &amp; Full-Stack Developer" />
+    <meta name="description" content="Explore Ahmed Maher's software engineering portfolio, featuring full-stack development, AI-powered applications, enterprise software experience, and selected projects." />
+    <meta name="author" content="Ahmed Maher" />
+    <meta name="keywords" content="Ahmed Maher, Software Engineer, Full-Stack Developer, React, Node.js, Flask, AI, Machine Learning, IBM Maximo, Cairo, Egypt" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ahmedmaherelsaeidi.vercel.app/" />
+    <meta property="og:title" content="Ahmed Maher | Software Engineer &amp; Full-Stack Developer" />
+    <meta property="og:description" content="Explore Ahmed Maher's software engineering portfolio, featuring full-stack development, AI-powered applications, enterprise software experience, and selected projects." />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content="Ahmed Maher | Software Engineer &amp; Full-Stack Developer" />
+    <meta property="twitter:description" content="Explore Ahmed Maher's software engineering portfolio, featuring full-stack development, AI-powered applications, enterprise software experience, and selected projects." />
+
+    <!-- Google Fonts: Inter, Manrope, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Anti-FOUC Theme Script -->
+    <script>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('portfolio-theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (savedTheme === 'light') {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+          } else if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.classList.add('light');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#F8F9FB] dark:bg-[#101114] text-[#18181B] dark:text-[#F3F4F6] selection:bg-cyan-500/20 selection:text-cyan-400 min-h-screen transition-colors duration-300 antialiased font-sans">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
