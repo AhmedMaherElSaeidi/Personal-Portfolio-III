@@ -12,8 +12,8 @@ export const personalInfo = {
   linkedin: "https://linkedin.com/in/ahmedmaherelsaeidi",
   github: "https://github.com/AhmedMaherElSaeidi",
   liveUrl: "https://ahmedmaherelsaeidi.vercel.app",
-  cvPath: "/Ahmed_Maher_CV.pdf",
-  photoUrl: "/assets/ahmed_maher.jpg",
+  cvPath: `${import.meta.env.BASE_URL}Ahmed_Maher_CV.pdf`,
+  photoUrl: `${import.meta.env.BASE_URL}assets/ahmed_maher.jpg`,
   highlights: [
     { value: "2+ Years", label: "Hands-on Web Development" },
     { value: "5 Months", label: "IBM Maximo Experience" },
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     ],
     frontendUrl: "https://github.com/AhmedMaherElSaeidi/HuPMap-Segmentation-ReactJS",
     backendUrl: "https://github.com/AhmedMaherElSaeidi/HuPMap-Segmentation-Flask",
-    image: "/assets/kidney_slice_1.jpg",
+    image: `${import.meta.env.BASE_URL}assets/hupmap_36780dbd27dc_image.png`,
   },
   {
     id: "tastybite-ordering",

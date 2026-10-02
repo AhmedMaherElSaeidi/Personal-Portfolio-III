@@ -3,7 +3,6 @@ import {
   ExternalLink,
   Cpu,
   CheckCircle,
-  Sliders,
   ShoppingBag,
   ShieldCheck,
   Languages,
@@ -11,10 +10,11 @@ import {
 import { GithubIcon } from './Icons';
 import { projects } from '../data/portfolioData';
 
+const hubmapImageUrl = `${import.meta.env.BASE_URL}assets/hupmap_36780dbd27dc_image.png`;
+const hubmapMaskUrl = `${import.meta.env.BASE_URL}assets/hupmap_36780dbd27dc_overlay.png`;
+
 export const ProjectsSection: React.FC = () => {
-  // HuBMAP interactive state
-  const [selectedModel, setSelectedModel] = useState<'unet' | 'custom_unet' | 'linknet' | 'fcn'>('custom_unet');
-  const [activeImageView, setActiveImageView] = useState<'raw' | 'true_mask' | 'pred_mask' | 'overlay'>('overlay');
+  const [activeImageView, setActiveImageView] = useState<'raw' | 'true_mask' | 'overlay'>('overlay');
 
   // TastyBite interactive state
   const [tastyLang, setTastyLang] = useState<'en' | 'ar'>('en');
@@ -23,13 +23,6 @@ export const ProjectsSection: React.FC = () => {
 
   const hubmapProject = projects.find((p) => p.id === 'hubmap-segmentation')!;
   const tastybiteProject = projects.find((p) => p.id === 'tastybite-ordering')!;
-
-  const modelMetrics = {
-    custom_unet: { name: 'Custom UNet (Tuned)', iou: '86.4%', dice: '92.1%', params: '18.4M', speed: '42ms' },
-    unet: { name: 'Standard UNet', iou: '84.8%', dice: '90.7%', params: '31.0M', speed: '58ms' },
-    linknet: { name: 'LinkNet', iou: '83.2%', dice: '89.5%', params: '11.5M', speed: '31ms' },
-    fcn: { name: 'FCN-8s', iou: '81.9%', dice: '88.3%', params: '24.2M', speed: '65ms' },
-  };
 
   const tastyDishes = [
     {
@@ -169,56 +162,11 @@ export const ProjectsSection: React.FC = () => {
                 </ul>
               </div>
 
-              {/* Quantitative Metrics Bar */}
-              <div className="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800/80 grid grid-cols-3 gap-3 text-center">
-                <div>
-                  <span className="text-[11px] font-mono-code text-zinc-400 dark:text-zinc-500 block">IoU Score</span>
-                  <span className="font-heading font-bold text-lg text-cyan-600 dark:text-cyan-400">
-                    {modelMetrics[selectedModel].iou}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-[11px] font-mono-code text-zinc-400 dark:text-zinc-500 block">Dice Score</span>
-                  <span className="font-heading font-bold text-lg text-emerald-600 dark:text-emerald-400">
-                    {modelMetrics[selectedModel].dice}
-                  </span>
-                </div>
-                <div>
-                  <span className="text-[11px] font-mono-code text-zinc-400 dark:text-zinc-500 block">Inference</span>
-                  <span className="font-heading font-bold text-lg text-zinc-900 dark:text-zinc-100">
-                    {modelMetrics[selectedModel].speed}
-                  </span>
-                </div>
-              </div>
             </div>
 
             {/* Right: Interactive Scientific Segmentation Interface */}
             <div className="lg:col-span-6 flex flex-col rounded-2xl bg-zinc-950 border border-zinc-800 p-5 shadow-2xl">
               
-              {/* Top Controls: Model Switcher */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-zinc-800">
-                <span className="text-xs font-mono-code text-zinc-400 flex items-center gap-1.5">
-                  <Sliders className="w-3.5 h-3.5 text-cyan-400" />
-                  Select Model:
-                </span>
-                
-                <div className="flex flex-wrap gap-1 bg-zinc-900 p-1 rounded-xl border border-zinc-800">
-                  {(['custom_unet', 'unet', 'linknet', 'fcn'] as const).map((m) => (
-                    <button
-                      key={m}
-                      onClick={() => setSelectedModel(m)}
-                      className={`px-2.5 py-1 text-[11px] font-mono-code rounded-lg transition-colors ${
-                        selectedModel === m
-                          ? 'bg-cyan-500 text-zinc-950 font-bold'
-                          : 'text-zinc-400 hover:text-zinc-100'
-                      }`}
-                    >
-                      {m === 'custom_unet' ? 'Custom UNet' : m.toUpperCase()}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
               {/* View Switcher Tabs (6 Comparison Views in App) */}
               <div className="flex flex-wrap gap-1.5 py-3 border-b border-zinc-800/80">
                 <button
@@ -230,16 +178,6 @@ export const ProjectsSection: React.FC = () => {
                   }`}
                 >
                   Overlaid Mask
-                </button>
-                <button
-                  onClick={() => setActiveImageView('pred_mask')}
-                  className={`px-2.5 py-1 rounded-md text-[11px] font-mono-code transition-colors ${
-                    activeImageView === 'pred_mask'
-                      ? 'bg-zinc-800 text-cyan-400 font-semibold'
-                      : 'text-zinc-400 hover:text-zinc-200'
-                  }`}
-                >
-                  Predicted Mask
                 </button>
                 <button
                   onClick={() => setActiveImageView('true_mask')}
@@ -265,74 +203,40 @@ export const ProjectsSection: React.FC = () => {
 
               {/* Visual Display Frame */}
               <div className="relative aspect-4/3 rounded-xl overflow-hidden bg-zinc-900 border border-zinc-800/80 my-3 flex items-center justify-center group">
-                
-                {/* Background Image: Authentic Tissue Slice */}
-                <img
-                  src="/assets/kidney_slice_1.jpg"
-                  alt="Kidney Tissue Microvasculature Slice"
-                  className={`w-full h-full object-cover transition-opacity duration-300 ${
-                    activeImageView === 'pred_mask' || activeImageView === 'true_mask'
-                      ? 'opacity-20'
-                      : 'opacity-90'
-                  }`}
-                />
-
-                {/* Mask Overlays with SVG Microvascular Segmentation Geometry */}
-                {(activeImageView === 'overlay' || activeImageView === 'pred_mask') && (
-                  <svg
-                    viewBox="0 0 400 300"
-                    className="absolute inset-0 w-full h-full pointer-events-none transition-all duration-300"
-                  >
-                    {/* Simulated precise microvasculature segmentation masks */}
-                    <path
-                      d="M 60,80 Q 90,60 130,85 T 190,110 Q 230,135 270,105 T 340,140 Q 370,165 350,210 T 290,240 Q 240,265 190,230 T 110,210 Q 70,185 55,140 Z"
-                      fill={activeImageView === 'pred_mask' ? 'none' : 'rgba(6, 182, 212, 0.25)'}
-                      stroke="#06B6D4"
-                      strokeWidth="2.5"
-                      strokeDasharray="4 2"
-                      className="animate-pulse"
+                {activeImageView === 'true_mask' ? (
+                  <img
+                    src={hubmapMaskUrl}
+                    alt="Ground-truth vessel annotation mask"
+                    className="h-full w-full object-contain"
+                  />
+                ) : (
+                  <div className="relative h-full w-full">
+                    <img
+                      src={hubmapImageUrl}
+                      alt="HuBMAP kidney tissue slice"
+                      className="h-full w-full object-contain"
                     />
-                    <path
-                      d="M 120,120 Q 150,110 180,130 T 220,160 Q 250,180 230,205 T 170,195 Q 130,175 120,140 Z"
-                      fill="rgba(56, 189, 248, 0.35)"
-                      stroke="#38BDF8"
-                      strokeWidth="2"
-                    />
-                    <circle cx="85" cy="190" r="14" fill="rgba(6, 182, 212, 0.4)" stroke="#06B6D4" strokeWidth="1.5" />
-                    <circle cx="310" cy="95" r="18" fill="rgba(6, 182, 212, 0.4)" stroke="#06B6D4" strokeWidth="1.5" />
-                    <circle cx="280" cy="210" r="12" fill="rgba(6, 182, 212, 0.4)" stroke="#06B6D4" strokeWidth="1.5" />
-                  </svg>
-                )}
-
-                {activeImageView === 'true_mask' && (
-                  <svg viewBox="0 0 400 300" className="absolute inset-0 w-full h-full pointer-events-none">
-                    <path
-                      d="M 62,82 Q 92,62 128,87 T 188,112 Q 228,137 268,107 T 338,142 Q 368,167 348,212 T 288,242 Q 238,267 188,232 T 108,212 Q 68,187 57,142 Z"
-                      fill="rgba(16, 185, 129, 0.3)"
-                      stroke="#10B981"
-                      strokeWidth="2.5"
-                    />
-                    <circle cx="85" cy="190" r="15" fill="rgba(16, 185, 129, 0.4)" stroke="#10B981" strokeWidth="1.5" />
-                    <circle cx="310" cy="95" r="19" fill="rgba(16, 185, 129, 0.4)" stroke="#10B981" strokeWidth="1.5" />
-                    <circle cx="280" cy="210" r="13" fill="rgba(16, 185, 129, 0.4)" stroke="#10B981" strokeWidth="1.5" />
-                  </svg>
+                    {activeImageView === 'overlay' && (
+                      <img
+                        src={hubmapMaskUrl}
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute inset-0 h-full w-full object-contain"
+                      />
+                    )}
+                  </div>
                 )}
 
                 {/* Floating badge */}
                 <div className="absolute bottom-3 left-3 px-2.5 py-1 rounded-lg bg-zinc-950/80 backdrop-blur-md border border-zinc-700/80 text-[11px] font-mono-code text-cyan-400">
-                  {modelMetrics[selectedModel].name} • View: {activeImageView.replace('_', ' ').toUpperCase()}
+                  HuBMAP sample • {activeImageView.replace('_', ' ').toUpperCase()}
                 </div>
 
-                <div className="absolute top-3 right-3 px-2 py-0.5 rounded text-[10px] font-mono-code bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                  Confidence: {modelMetrics[selectedModel].dice}
-                </div>
               </div>
 
-              {/* Inferencing specs footer */}
               <div className="pt-2 flex items-center justify-between text-[11px] font-mono-code text-zinc-500">
-                <span>Architecture: {selectedModel.toUpperCase()}</span>
-                <span>Params: {modelMetrics[selectedModel].params}</span>
-                <span>Resolution: 512×512 px</span>
+                <span>Ground-truth annotation</span>
+                <span>512 × 512 px</span>
               </div>
 
             </div>
