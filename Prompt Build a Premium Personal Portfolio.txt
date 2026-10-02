@@ -1,0 +1,702 @@
+# Prompt: Build a Premium Personal Portfolio for Ahmed Maher — Software Engineer
+
+Act as a **senior UI/UX designer, creative frontend engineer, and software architect**. Design and build a complete, production-ready personal portfolio website for **Ahmed Maher, a Software Engineer based in Cairo, Egypt**.
+
+The website should feel like a premium, custom-designed digital product rather than a generic developer portfolio template. It should communicate technical expertise, creativity, professionalism, and attention to detail while remaining intuitive, accessible, fast, and visually comfortable.
+
+The portfolio's primary goal is to help recruiters, hiring managers, and potential clients quickly understand my background, explore my projects, and contact me.
+
+---
+
+# 1. Design Philosophy and Visual Identity
+
+Create a **minimalist, modern, sophisticated, and visually distinctive** design.
+
+The design should combine:
+
+* Premium SaaS product aesthetics.
+* Modern editorial layouts and typography.
+* Subtle glass effects where appropriate.
+* Clean layouts with generous whitespace.
+* Carefully chosen accent colors.
+* Smooth, purposeful animations.
+* A clear visual hierarchy.
+
+### Visual direction
+
+Avoid the typical portfolio design with a huge gradient background, excessive glowing effects, generic floating cards, or unnecessary animations.
+
+Instead, create a visual identity that feels custom-built for a software engineer who works across full-stack development, enterprise software, and AI.
+
+**Suggested color palette:**
+
+Dark theme:
+
+* Background: Deep charcoal or near-black (#101114).
+* Secondary surfaces: Slightly lighter charcoal (#191B20).
+* Primary text: Soft white (#F3F4F6).
+* Secondary text: Muted gray (#A1A1AA).
+* Accent: Electric blue, cyan, or a carefully selected blue-violet.
+* Borders: Subtle, low-contrast gray.
+
+Light theme:
+
+* Background: Soft off-white (#F8F9FB).
+* Secondary surfaces: Pure white (#FFFFFF).
+* Primary text: Deep charcoal (#18181B).
+* Secondary text: Muted gray (#71717A).
+* Accent: A complementary shade of the dark theme's accent.
+* Borders: Soft gray with subtle contrast.
+
+Keep the accent color consistent across both themes.
+
+Ensure that colors maintain sufficient contrast and that the website remains comfortable to look at during extended browsing.
+
+### Typography
+
+Use modern, highly readable typography.
+
+Suggested fonts:
+
+* Headings: Inter, Manrope, or Geist.
+* Body: Inter or Geist.
+* Code snippets and technical labels: JetBrains Mono.
+
+Use a clear type scale, carefully controlled line lengths, and appropriate font weights.
+
+Headings should feel expressive without becoming oversized or overwhelming.
+
+---
+
+# 2. Responsive Navigation
+
+Create a clean, sticky navigation bar that remains accessible while scrolling.
+
+Navigation items:
+
+* Home
+* About
+* Experience
+* Projects
+* Skills
+* Education
+* Contact
+
+Requirements:
+
+* Display my name or a minimal personal logo on the left.
+* Place navigation links on the right on desktop.
+* Include a theme toggle for light and dark modes.
+* Add a prominent but subtle "Let's Talk" or "Contact Me" button.
+* Use smooth scrolling to navigate between sections.
+* Highlight the active section as the user scrolls.
+* Use a responsive mobile menu with a polished opening and closing animation.
+* Keep the navbar compact and unobtrusive.
+* Support keyboard navigation and visible focus indicators.
+
+The navbar should have a subtle background or blur effect when scrolling, without reducing readability.
+
+---
+
+# 3. Hero Section — First Impression
+
+Design an impressive but restrained hero section that immediately communicates my professional identity.
+
+Suggested layout:
+
+**Left side:**
+
+Small introductory label:
+"SOFTWARE ENGINEER | FULL-STACK DEVELOPER"
+
+Main heading:
+
+"Building digital experiences that solve real-world problems."
+
+Make the heading visually distinctive using carefully styled text, but avoid excessive gradients or distracting effects.
+
+Introduction:
+
+"I'm Ahmed Maher, a Software Engineer with hands-on experience building full-stack applications, developing AI-powered solutions, and customizing enterprise software."
+
+Include two primary actions:
+
+* Explore My Work
+* Get in Touch
+
+Add a secondary link:
+
+* Download My CV
+
+The CV button should download the actual PDF CV provided for this project. Do not fabricate a replacement CV.
+
+**Right side:**
+
+Create a visually interesting and tasteful composition. Choose one of these approaches based on what works best with the layout:
+
+* A sophisticated abstract technical illustration.
+* A custom animated composition of interconnected technology elements.
+* A clean, professional developer-inspired visual with code fragments, terminal elements, or a project-related visual.
+
+Avoid generic stock photos, random floating shapes, and distracting animated code.
+
+**Additional details:**
+
+* Add a subtle entrance animation to the hero content.
+* Include a small availability indicator only if availability information is explicitly provided.
+* Add a scroll indicator at the bottom.
+* Make the hero responsive, with a strong visual hierarchy on mobile.
+* Ensure the primary message and actions appear without excessive scrolling on common laptop screens.
+
+---
+
+# 4. About Me
+
+Create a well-structured About section that tells my professional story naturally.
+
+Use the following information:
+
+"I'm a Computer Science and Artificial Intelligence graduate from Helwan University, specializing in Software Engineering. I have over two years of hands-on web development experience and professional experience customizing enterprise workflows and UI configurations using IBM Maximo.
+
+I enjoy solving complex problems, designing practical solutions, and building applications from the backend to the user interface. My experience spans full-stack development, AI-powered applications, database management, and enterprise systems."
+
+Include a few compact highlight cards:
+
+* 2+ Years of Hands-on Web Development
+* 5 Months of IBM Maximo Development Experience
+* 3.94/4.00 CGPA
+* Ranked 8th in My Class
+
+Use elegant cards with subtle hover effects and simple icons.
+
+Do not invent achievements, years of experience beyond what the CV supports, or personal details.
+
+The section should feel personal and professional, not like a corporate biography.
+
+---
+
+# 5. Experience Timeline
+
+Create a visually engaging professional experience timeline.
+
+Use a vertical timeline on desktop and an appropriately adapted layout on mobile.
+
+### Software Engineer
+
+**MegaSoft IT Consulting & Training**
+
+Cairo, Egypt | September 2024 – January 2025
+
+Description:
+
+* Customized IBM Maximo workflows and UI configurations according to client requirements.
+* Collaborated with stakeholders to translate business needs into interface improvements.
+* Developed automation scripts and escalation rules in IBM Db2.
+* Contributed to improving operational efficiency through database and workflow automation.
+
+### IT Intern
+
+**National Bank of Egypt**
+
+Cairo, Egypt | August 2023 – September 2023
+
+Description:
+
+* Wrote SQL queries and automated reports using Oracle Database.
+* Supported internal banking operations through data analysis and reporting automation.
+
+### Compulsory Military Service
+
+**Egypt**
+
+April 2025 – June 2026
+
+Display this period as a professional timeline entry without inventing job responsibilities or technical achievements.
+
+Use subtle timeline animations and visually distinguish organizations, roles, and dates.
+
+---
+
+# 6. Featured Projects — The Main Attraction
+
+This section should be one of the strongest parts of the entire portfolio.
+
+Create a premium project showcase with large project cards, attractive visuals, concise descriptions, technology tags, and clear links.
+
+Avoid making all projects look identical. Use visual variation while maintaining consistent design principles.
+
+## Project 1: HuBMAP — Microvasculature Segmentation
+
+Category: Graduation Project | AI / Machine Learning | Full-Stack Development
+
+Technologies:
+
+* Python
+* Flask
+* React.js
+* TensorFlow
+* UNet
+* Custom UNet
+* LinkNet
+* FCN
+
+Description:
+
+"Built a full-stack deep-learning application for segmenting microvascular structures in kidney tissue images. Developed a Flask backend serving four segmentation models and a React frontend that allows users to upload images and compare model predictions."
+
+Key features:
+
+* Image preprocessing.
+* Deep-learning model development.
+* Hyperparameter tuning.
+* Four segmentation models.
+* Image upload and comparison interface.
+* Six comparison images in the results interface.
+* Evaluation using Intersection over Union (IoU) and Dice scores.
+
+Project links:
+
+* Frontend: https://github.com/AhmedMaherElSaeidi/HuPMap-Segmentation-ReactJS
+* Backend: https://github.com/AhmedMaherElSaeidi/HuPMap-Segmentation-Flask
+
+Visual direction:
+
+Give this project a prominent showcase layout.
+
+If actual screenshots or a demonstration are available, use them to show the application's interface and image segmentation results.
+
+If screenshots are unavailable, create a clearly illustrative visual using abstract image-segmentation masks. Do not present fabricated screenshots or invented performance results as real project outputs.
+
+Include buttons:
+
+* View Frontend
+* View Backend
+
+## Project 2: TastyBite — Online Food Ordering Application
+
+Category: Full-Stack Development | E-commerce
+
+Technologies:
+
+* React
+* Vite
+* Node.js
+* Express.js
+* MongoDB
+* JWT
+* Cloudinary
+
+Description:
+
+"Designed and developed a bilingual online food ordering platform featuring an English and Arabic interface with full RTL support. Built the frontend and backend, including authentication, cart management, checkout, product management, and order-status workflows."
+
+Key features:
+
+* Bilingual interface (English and Arabic).
+* Full right-to-left layout support.
+* Menu browsing.
+* Shopping cart.
+* Checkout workflow.
+* JWT authentication.
+* Cloudinary image uploads.
+* Admin dashboard.
+* Product and category management.
+* Order-status management.
+
+Project links:
+
+* Frontend: https://github.com/AhmedMaherElSaeidi/TastyBite-reactjs
+* Backend: https://github.com/AhmedMaherElSaeidi/TastyBite-nodejs
+* Live Demo: https://tasty-bite-reactjs.vercel.app
+
+Visual direction:
+
+Use a visually appealing project card featuring actual application screenshots, if available.
+
+Showcase the bilingual capability and interface design. Add an interactive preview or a gallery if screenshots are provided.
+
+Buttons:
+
+* Live Demo
+* Frontend Repository
+* Backend Repository
+
+## Project showcase interactions
+
+* Add elegant hover effects to project cards.
+* Use subtle image zoom or movement on hover.
+* Provide clear visual feedback on clickable elements.
+* Keep project descriptions concise, with the option to reveal more details.
+* Ensure external links open appropriately.
+* Use real project URLs and avoid placeholder links.
+* Do not invent additional projects or claim features that are not documented.
+
+---
+
+# 7. Technical Skills
+
+Build a structured skills section that showcases my technical abilities without turning the portfolio into a wall of logos.
+
+Organize the skills into visually clear categories.
+
+### Programming Languages
+
+* JavaScript
+* Python
+
+### Frontend Development
+
+* React.js
+* Redux
+* Bootstrap
+* SASS
+* HTML5
+* CSS3
+
+### Backend Development and APIs
+
+* Node.js
+* Express.js
+* Flask
+* REST APIs
+* GraphQL APIs
+* JWT Authentication
+* Firebase
+
+### Databases
+
+* MongoDB
+* PostgreSQL
+* IBM Db2
+
+### Data Science and Machine Learning
+
+* NumPy
+* Pandas
+* Matplotlib
+* TensorFlow
+
+### Tools and Platforms
+
+* Git
+* GitHub
+* Postman
+* Vercel
+* Linux
+* IBM Maximo
+
+Design direction:
+
+* Use clean skill groups with subtle visual separation.
+* Use simple, recognizable icons where appropriate.
+* Consider small hover interactions.
+* Avoid meaningless progress bars or percentages that imply unverified proficiency levels.
+* Keep the section easy to scan for recruiters and technical hiring managers.
+
+---
+
+# 8. Education and Certifications
+
+Create a compact, elegant section highlighting my academic background and professional certifications.
+
+### Education
+
+**Bachelor of Science in Computer Science and Artificial Intelligence**
+
+Helwan University — Cairo, Egypt
+
+September 2020 – May 2024
+
+* Specialization: Software Engineering
+* CGPA: 3.94/4.00
+* Class Rank: 8th
+
+Present academic achievements in a visually distinctive but restrained way.
+
+### Certifications
+
+Display certifications as a clean list or compact cards, organized by title and date.
+
+* SQL — 365 Data Science | November 2025
+* ITIL V4 Foundation — MegaSoft | November 2024
+* Full-Stack Web Development using Python — Information Technology Institute | September 2024
+* ASP.NET Development — Information Technology Institute | February 2023
+* Frontend Development using React.js — Information Technology Institute | August 2022
+* Web Development using PHP — Information Technology Institute | July 2022
+
+Do not create fake certificate images, verification badges, or certificate links.
+
+---
+
+# 9. Contact Section — Turn Visitors Into Opportunities
+
+Create a visually inviting contact section that makes it easy for recruiters and potential clients to reach me.
+
+Suggested headline:
+
+"Have a project in mind or an opportunity to discuss?"
+
+Supporting text:
+
+"I'm always interested in connecting with people, discussing software engineering challenges, and exploring new opportunities."
+
+Contact information:
+
+* Email: [ahmedmaherelsaeidy@outlook.com](mailto:ahmedmaherelsaeidy@outlook.com)
+* LinkedIn: https://linkedin.com/in/ahmedmaherelsaeidi
+* GitHub: https://github.com/AhmedMaherElSaeidi
+
+Include:
+
+* A prominent email contact button using a mailto link.
+* LinkedIn profile link.
+* GitHub profile link.
+* An optional contact form if a real submission backend or reliable email service is configured.
+
+If implementing a contact form:
+
+* Include name, email, subject, and message fields.
+* Validate inputs.
+* Provide clear success and error states.
+* Protect against spam and abuse.
+* Never pretend a message has been sent if no backend or email integration exists.
+
+Make the contact section feel like a natural conclusion to the page rather than a generic form at the bottom.
+
+---
+
+# 10. Theme System — Dark and Light Modes
+
+Implement a complete dark/light theme system.
+
+Requirements:
+
+* A clearly visible theme toggle in the navbar.
+* Smooth, restrained theme transitions.
+* Theme-aware colors for backgrounds, text, borders, cards, and interactive elements.
+* Store the user's preference using local storage.
+* Respect the operating system's preferred color scheme on the first visit, unless a saved preference exists.
+* Prevent a flash of the wrong theme during initial page loading.
+* Use accessible icons and descriptive labels for the theme toggle.
+* Ensure every section, component, chart, and interactive element supports both themes.
+
+Avoid simply inverting colors. Both themes should be intentionally designed.
+
+---
+
+# 11. Animation and Interaction Design
+
+Animations should make the interface feel polished and responsive without distracting visitors.
+
+Use a consistent animation system.
+
+### Recommended animations
+
+* Subtle fade and slide transitions when sections enter the viewport.
+* Gentle staggered entrance animations for related elements.
+* Smooth navigation scrolling.
+* Subtle button hover and press states.
+* Small card elevation or border changes on hover.
+* Smooth theme switching.
+* A polished mobile navigation transition.
+* Minimal decorative animation in the hero section.
+
+### Animation rules
+
+* Prioritize performance and responsiveness.
+* Avoid excessive parallax effects.
+* Avoid continuous motion that draws attention away from content.
+* Avoid aggressive scroll hijacking.
+* Avoid excessive bounce, rotation, flashing, and large-scale movement.
+* Respect the `prefers-reduced-motion` accessibility setting.
+* Ensure animations do not interfere with reading, clicking, or keyboard navigation.
+
+Use Framer Motion or Motion where appropriate, but do not introduce a heavy animation dependency just for simple CSS transitions.
+
+---
+
+# 12. Responsive Design
+
+The portfolio must work seamlessly across:
+
+* Large desktop screens.
+* Standard laptops.
+* Tablets.
+* Mobile phones.
+
+Requirements:
+
+* Mobile-first responsive layout.
+* Fluid typography and spacing.
+* Responsive project showcase cards.
+* Touch-friendly interactive elements.
+* Proper mobile navigation.
+* No horizontal overflow.
+* Appropriate image sizing and cropping.
+* Readable text at every screen size.
+* Responsive timeline and skill layouts.
+
+Do not merely shrink the desktop design for mobile. Reconsider the layout and content hierarchy for smaller screens.
+
+---
+
+# 13. Accessibility and User Experience
+
+Treat accessibility as a core design requirement rather than an optional enhancement.
+
+Implement:
+
+* Semantic HTML.
+* Logical heading hierarchy.
+* Accessible navigation.
+* Keyboard-friendly interactions.
+* Visible focus indicators.
+* Accessible color contrast.
+* Descriptive alt text for meaningful images.
+* Appropriate labels for form controls.
+* ARIA attributes only when needed.
+* Reduced-motion support.
+* Clear error and success feedback.
+* Accessible theme controls.
+
+Make sure the site is usable by people relying on keyboard navigation and assistive technologies.
+
+---
+
+# 14. Performance and SEO
+
+Build the website to load quickly and perform well.
+
+### Performance
+
+* Optimize images and use modern formats where possible.
+* Lazy-load below-the-fold images.
+* Avoid unnecessary dependencies.
+* Minimize layout shifts.
+* Keep animations GPU-friendly.
+* Use code splitting when beneficial.
+* Avoid rendering large, unnecessary components.
+* Optimize fonts and prevent excessive font loading.
+* Avoid unnecessary client-side JavaScript.
+
+### SEO
+
+Include:
+
+* A descriptive page title.
+* A meaningful meta description.
+* Open Graph metadata for social sharing.
+* A favicon and a suitable web app theme color.
+* Semantic content structure.
+* Appropriate canonical URL if the production domain is confirmed.
+* Structured data only where accurate and appropriate.
+* A custom 404 page if supported by the chosen framework.
+
+Suggested page title:
+
+"Ahmed Maher | Software Engineer & Full-Stack Developer"
+
+Suggested meta description:
+
+"Explore Ahmed Maher's software engineering portfolio, featuring full-stack development, AI-powered applications, enterprise software experience, and selected projects."
+
+---
+
+# 15. Technical Implementation
+
+Use a modern, maintainable frontend architecture.
+
+Preferred stack:
+
+* React.js
+* Vite
+* TypeScript
+* Tailwind CSS
+* Framer Motion or Motion, where appropriate
+* Lucide icons
+
+If an existing project already has an established framework or architecture, inspect it first and adapt rather than unnecessarily replacing it.
+
+### Code quality requirements
+
+* Use reusable components.
+* Keep components focused and maintainable.
+* Separate content data from presentation logic where appropriate.
+* Use consistent naming conventions.
+* Avoid unnecessary abstraction.
+* Keep dependencies minimal.
+* Use TypeScript types for component props and structured data.
+* Ensure the application can be built and deployed without errors.
+
+Suggested component structure:
+
+* `Navbar`
+* `MobileMenu`
+* `ThemeToggle`
+* `HeroSection`
+* `AboutSection`
+* `ExperienceTimeline`
+* `ProjectsSection`
+* `ProjectCard`
+* `SkillsSection`
+* `EducationSection`
+* `CertificationsSection`
+* `ContactSection`
+* `Footer`
+* `ScrollToTop`
+
+Keep the project data in a separate configuration file where practical, making it easy to add new projects and update information later.
+
+---
+
+# 16. Small Details That Make a Big Difference
+
+Pay attention to the details that distinguish a polished portfolio from a basic template.
+
+* Add a subtle active navigation indicator.
+* Include a tasteful scroll-to-top control that appears only when useful.
+* Add meaningful loading states if any asynchronous features are implemented.
+* Use consistent corner radii and spacing.
+* Keep shadows subtle and purposeful.
+* Make external links visually recognizable.
+* Include a custom favicon or minimal personal monogram.
+* Ensure the website looks polished even if animations are disabled.
+* Add a proper footer with social links and a copyright notice.
+* Ensure there are no dead buttons, fake interactions, or placeholder text.
+* Use real screenshots and actual project assets whenever provided.
+* Include a graceful fallback when project images are unavailable.
+* Make the page content easy to update without modifying multiple components.
+
+---
+
+# 17. Final Design and Development Instructions
+
+Before implementation:
+
+1. Inspect the existing repository, if one exists.
+2. Identify the framework, installed dependencies, and existing project structure.
+3. Review the provided CV and use its information as the source of truth.
+4. Establish a coherent design system covering colors, typography, spacing, buttons, cards, and animations.
+5. Plan the page hierarchy and responsive layouts.
+
+During implementation:
+
+1. Build the actual working website, not just a visual mockup.
+2. Prioritize the hero section and featured projects.
+3. Ensure all navigation, theme switching, project links, and contact actions work.
+4. Test the layout in both themes and across screen sizes.
+5. Check accessibility, responsiveness, and performance.
+6. Use real content and avoid invented information.
+7. Fix errors rather than leaving unfinished components or placeholder implementations.
+
+### Final quality target
+
+The finished portfolio should feel like a thoughtfully designed product created by an experienced software engineer.
+
+A recruiter should be able to understand who I am, what I build, and how to contact me within a few seconds.
+
+A technical interviewer should be able to explore my projects and quickly identify the technologies, engineering challenges, and capabilities demonstrated by each one.
+
+The visual experience should be memorable without being overwhelming, with a clear balance between aesthetics, usability, and technical performance.
+
+**Important:** Do not sacrifice readability, accessibility, or maintainability for visual effects. Every design decision should have a clear purpose.
